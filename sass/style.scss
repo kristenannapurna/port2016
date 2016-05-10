@@ -1,0 +1,264 @@
+/*
+* Theme Name: HackerYou Starter Theme
+* Theme URI: http://hackeryou.com;
+* Description: Starter theme for building any website. Created by HackerYou. * Rename this to your own theme page.
+* Version: 1.0
+* Author: HackerYou
+* Author URI: http://hackeryou.com
+*/
+
+$gradient: linear-gradient(10deg, #04D8F5 1%, #4437FD 99%);
+$copy: #FFEBDE;
+$fancy: #39FBEC;
+$boldBlue: #4437FD;
+$sassyPink: #AB07CD;
+$lilac: #F6DDFB;
+
+
+@import 'normalize';
+@import 'mixins';
+@import 'typography';
+@import 'navigation';
+@import 'sidebar';
+@import 'comments';
+@import 'footer';
+@import 'svg';
+@import 'simpletext';
+/*
+====================================
+Default Styling
+====================================
+*/
+
+
+html{
+	font-size: 62.5%;
+}
+
+img {
+	max-width: 100%;
+}
+
+body {
+	color: $copy;
+	background: $gradient;
+	padding-top: 50px;
+	font-family: 'Montserrat', sans-serif;
+	@include font-sizer(16);
+}
+
+section{
+	padding: 50px 0 150px;
+	position: relative;
+	@include respond-to('small'){
+		text-align: center;
+	}
+}
+.container {
+	width: 75%;
+	max-width: 980px;
+	margin: 0 auto;
+}
+
+.flex-container{
+	display: flex;
+	// flex-wrap: wrap;
+}
+
+.button{
+	@include font-sizer(23);
+	border: 3px solid $copy;
+	color: $copy;
+	font-weight: 700;
+	letter-spacing: 2.16px;
+	padding: 15px 30px;
+	text-decoration: none;
+	box-shadow: inset 0 0 0 0 $copy;
+	transform: translateZ(0deg);
+	transition: box-shadow ease 1s;
+	position: relative;
+	@include respond-to('small'){
+		@include font-sizer(16);
+
+	}
+	&:before{
+		content: url(./images/heart.svg);
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		opacity: 0;
+		transition: opacity 0.5s;		
+	}
+	&:hover{
+		box-shadow: inset 300px 0 0 0 $copy;
+		transform: translateZ(0deg);
+		color: $copy;
+		&:before{
+			opacity: 1;
+			transition: opacity 0.5s ease-in 0.5s;
+		}
+	}
+	
+}
+
+
+//HEADER
+
+.header-logo{
+	width: 22%;
+	@include respond-to('small'){
+		width: 100%;
+	}
+}
+
+header svg{
+	stroke: $copy;
+	fill: $copy;
+	width: 100%;
+	.squiggle{
+		stroke-dasharray: 1000;
+		stroke-dashoffset: 1000;
+		animation: squiggle 10s ease-in forwards;
+	}
+}
+
+@keyframes squiggle {
+  to{
+    stroke-dashoffset: 0;
+  }
+}
+
+
+
+//FRONT PAGE
+
+.rays{
+	margin-bottom: 50px;
+	@include respond-to('medium'){
+		padding-top: 60px;
+	}
+	 svg{
+		display: block;
+		margin: 0 auto;
+		@include respond-to('small'){
+			width: 100%;
+		}
+	}
+}
+
+.waves{
+	padding-top: 130px;
+	width: 90%;
+	margin: 0 auto;
+	@include respond-to('medium'){
+		padding-top: 70px;
+		width: 70%;
+	}
+	svg{
+		@include respond-to('medium'){
+			transform: scale(1.2);
+		}
+	}
+}
+
+#contact{
+	text-align: center;
+	p{
+		@include respond-to('small'){
+			width: 60%;
+			margin: 0 auto;
+			padding-bottom: 70px;
+		}
+	}
+}
+
+.yyz{
+	position: absolute;
+	top: 50px;
+	right: 50px;
+	opacity: 0.25;
+	color: $fancy;
+	@include font-sizer(73);
+	letter-spacing: 6.8px;
+	font-weight: 700;
+	@include respond-to('medium'){
+		top: 250px;
+		right: 0;
+	}
+	@include respond-to('small'){
+		display: none;
+	}
+}
+
+//FOOTER
+
+footer{
+	background: $boldBlue;
+	padding: 10px 50px;
+	@include respond-to('small'){
+		padding: 0;
+	}
+	p{
+		@include font-sizer(18);
+		font-weight: 400;
+		margin-right: 20px;
+	}
+	.copy{
+		flex-basis: auto;
+		max-width: 100%;
+		p{
+			@include respond-to('medium'){
+				@include font-sizer(12);
+			}
+		}
+	}
+	.flex-container{
+		justify-content: space-between;
+		align-items: center;
+		@include respond-to('medium'){
+			flex-direction: column;
+		}
+	}
+	.social{
+		display: flex;
+		min-height: 25px;
+		max-width: 100%;
+		align-items: center;
+		flex-basis: auto;
+		@include respond-to('medium'){
+			flex-direction: column;
+		}
+		.flex-container{
+			flex-direction: row;
+		}
+	}
+}
+
+
+.diamond{
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	margin: 20px;
+	background: $fancy;
+	border-radius: 3px; 
+	transform: rotate(315deg) translateZ(0deg);
+	text-align: center;
+	transition: transform 0.5s;
+	&:hover{
+		transform: rotate(270deg) translateZ(0deg);
+		i{
+			transform: translateZ(0deg) translateY(-50%) rotate(-270deg);
+		}
+	}
+	i{
+		color: $boldBlue;
+		@include font-sizer(23);
+		position: relative;
+		top: 50%;
+		transform: translateZ(0deg) translateY(-50%) rotate(-315deg) ;
+		transition: transform 0.5s;
+	}
+}
+
+

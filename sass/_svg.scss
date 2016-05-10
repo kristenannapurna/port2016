@@ -1,0 +1,153 @@
+//svg icons
+
+	@each $icon, $top, $left in (squiggle1, -23%, 66%), 
+															(squiggle2, 43%, 25%), 
+															(squiggle3, 70%, 17%), 
+															(circle, -10%, 74%), 
+															(puppy, 40%, 66%), 
+															(coffee, 28%, 75%),
+															(cactus, 33%, 15%){
+		.#{$icon}{
+			position: absolute;
+			top: $top;
+			left: $left;
+		}
+	}
+
+
+
+//colour mixin	
+	@-webkit-keyframes colourShift{
+		0%{
+			fill: $fancy;
+			stroke: $fancy;
+		}
+		25%{
+			fill: $copy;
+			stroke: $copy;
+		}
+		50%{
+			fill: $sassyPink;
+			stroke: $sassyPink;
+		}
+		75%{
+			fill: $lilac;
+			stroke: $lilac;
+		}
+		100%{
+			fill: $fancy;
+			storke: $fancy;
+
+		}
+	}
+
+
+
+
+
+.cactus{
+	fill: $fancy;
+	stroke: $fancy;
+	animation: colourShift 20s infinite;
+	@media (max-width: 1050px) {
+		top: 43%;
+		left: 11%;
+	}
+	@include respond-to('medium'){
+		top: 46%;
+		left: 10%;
+	}
+	@include respond-to('small'){
+		top: 53%;
+		left: 3%;
+		width: 15%;
+	}
+}
+
+.squiggle1{
+	fill: $copy;
+	stroke: $copy;
+	animation: colourShift 25s infinite;
+	@include respond-to('small'){
+		top: -26%;
+		left: 6%;
+		width: 10%;
+	}
+}
+
+.squiggle2{
+	fill: $copy;
+	stroke: $copy;
+	animation: colourShift 10s infinite;
+	@media (max-width: 1050px) {
+		top: 49%;
+		left: 34%;
+	}
+	@include respond-to('medium'){
+		display: none;
+	}
+}
+
+.squiggle3{
+	fill: $copy;
+	stroke: $copy;
+	animation: colourShift 15s infinite;
+	@include respond-to('medium'){
+		top: 91%;
+		left: 10%;
+	}
+	@include respond-to('small'){
+		width: 10%;
+		top: 71%;
+	}
+}
+
+.coffee{
+	@media (max-width: 1050px) {
+		top: 34%;
+		left: 80%;
+	}
+	@include respond-to('medium'){
+		top: 43%;
+		left: 85%;
+	}
+	@include respond-to('small'){
+		top: 51%;
+		left: 86%;
+		width: 10%;
+	}
+}
+
+.puppy{
+	fill: $copy;
+	stroke: $copy;
+	animation: colourShift 14s infinite;
+	@media (max-width: 1050px) {
+		top: 46%;
+	}
+	@include respond-to('medium'){
+		top: 85%;
+		left: 80%;
+	}
+	@include respond-to('small'){
+		width: 15%;
+		top: 87%;
+	}
+}
+
+
+.circle{
+	@media (min-width: 750px) and (max-width: 1000px){
+		display: none;
+	}
+	@include respond-to('small'){
+		top: -5%;
+		left: 85%;
+		width: 10%;
+	}
+}
+
+
+
+
+
