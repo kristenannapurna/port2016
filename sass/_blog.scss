@@ -1,14 +1,21 @@
 
-body.blog{
+body.blog, body.single{
 	padding: 0;
+	margin: 0;
 }
 .main.blog{
 	display: flex;
+	.content{
+		background: #fff;
+	}
+	code{
+		color: $sassyPink;
+	}
 	h1{
 		text-align: center;
 		display: block;
 	}
-	.content{
+	.container{
 		flex: 1 0 70%;
 	}
 	.header-logo{
@@ -16,23 +23,26 @@ body.blog{
 		margin: 0 auto;
 	}
 	article{
-		background: #fff;
 		padding: 10px 70px;
 		color: darken($boldBlue, 30);
-		.entry-title a{
+		h2{
+			line-height: 1.2;
+		}
+		h1, .entry-title a{
 			text-decoration: none;
 			text-transform: uppercase;
 			font-size: 3.5rem;
 			letter-spacing: 0px;
+			text-align: left;
+
 		}
 		.entry-content{
 			padding: 0;
 			a{
 				text-decoration: none;
 				color: darken(#39FBEC, 20);
-				transition: color 0.5s;
 				&:hover{
-					color: #39FBEC;
+					text-decoration: line-through;
 				}
 			}
 			p{
@@ -55,3 +65,21 @@ body.blog{
 	padding-top: 50px;
 }
 
+.blogNav{
+	padding: 0 70px;
+	span{
+		font-size: 4.6rem;
+		position: relative;
+		top: 12px;
+	}
+	p{
+	font-size: 1.6rem;
+	text-transform: uppercase;
+	letter-spacing: 0;	
+	a{
+		text-decoration: none;
+		padding: 0 10px;
+		color: $boldBlue;
+	}
+	}
+}

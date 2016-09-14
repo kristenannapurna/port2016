@@ -116,12 +116,13 @@ header svg{
 	stroke: $copy;
 	fill: $copy;
 	width: 100%;
-	.squiggle{
+}
+
+.squiggle{
 		stroke-dasharray: 1000;
 		stroke-dashoffset: 1000;
 		animation: squiggle 10s ease-in forwards;
 	}
-}
 
 @keyframes squiggle {
   to{

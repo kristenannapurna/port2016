@@ -4,7 +4,7 @@
 <div class="main blog">
 		<?php get_template_part('sidebar') ?>
   <div class="container">
-    <div class="content">
+    <div class="content clearfix">
     		<?php get_template_part( 'loop', 'index' );	?>
     </div> <!--/.content -->
   </div> <!-- /.container -->

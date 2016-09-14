@@ -1,8 +1,9 @@
-<?php get_header(); ?>
+<?php get_header('blog'); ?>
 
-<div class="main">
+<div class="main blog">
+  <?php get_template_part('sidebar') ?>
   <div class="container">
-    <div class="content">
+    <article class="content">
       <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
         <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -35,10 +36,7 @@
 
       <?php endwhile; // end of the loop. ?>
 
-    </div> <!-- /.content -->
-
-    <?php get_sidebar(); ?>
-
+    </article> <!-- /.content -->
   </div> <!-- /.container -->
 </div> <!-- /.main -->
 
