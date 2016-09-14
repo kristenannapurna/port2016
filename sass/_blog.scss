@@ -65,8 +65,17 @@ body.blog, body.single{
 	padding-top: 50px;
 }
 
+.single{
+	.blogNav{
+		padding: 0;
+	}
+}
+
+
 .blogNav{
 	padding: 0 70px;
+	display: flex;
+	justify-content: space-between;
 	span{
 		font-size: 4.6rem;
 		position: relative;
@@ -79,7 +88,7 @@ body.blog, body.single{
 	a{
 		text-decoration: none;
 		padding: 0 10px;
-		color: $boldBlue;
+		color: darken(#39FBEC, 20);
 	}
 	}
 }

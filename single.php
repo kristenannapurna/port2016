@@ -1,6 +1,6 @@
 <?php get_header('blog'); ?>
 
-<div class="main blog">
+<div class="main blog single">
   <?php get_template_part('sidebar') ?>
   <div class="container">
     <article class="content">
@@ -10,7 +10,8 @@
           <h1 class="entry-title"><?php the_title(); ?></h1>
 
           <div class="entry-meta">
-            <?php hackeryou_posted_on(); ?>
+            <?php the_date() ?>
+            <?php //hackeryou_posted_on(); ?>
           </div><!-- .entry-meta -->
 
           <div class="entry-content">
@@ -22,17 +23,17 @@
           </div><!-- .entry-content -->
 
           <div class="entry-utility">
-            <?php hackeryou_posted_in(); ?>
-            <?php edit_post_link( 'Edit', '<span class="edit-link">', '</span>' ); ?>
+            <?php //hackeryou_posted_in(); ?>
+            <?php //edit_post_link( 'Edit', '<span class="edit-link">', '</span>' ); ?>
           </div><!-- .entry-utility -->
         </div><!-- #post-## -->
 
-        <div id="nav-below" class="navigation">
-          <p class="nav-previous"><?php previous_post_link('%link', '&larr; %title'); ?></p>
-          <p class="nav-next"><?php next_post_link('%link', '%title &rarr;'); ?></p>
+        <div id="nav-below" class="navigation blogNav">
+          <p class="nav-previous"><?php previous_post_link('%link', '<span>👈</span> %title'); ?></p>
+          <p class="nav-next"><?php next_post_link('%link', '%title <span> 👉</span>'); ?></p>
         </div><!-- #nav-below -->
 
-        <?php comments_template( '', true ); ?>
+        <?php //comments_template( '', true ); ?>
 
       <?php endwhile; // end of the loop. ?>
 
