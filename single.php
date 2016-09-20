@@ -8,14 +8,14 @@
 
         <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
           <h1 class="entry-title"><?php the_title(); ?></h1>
-
+          <?php the_tags( '<ul class="tagsList"><li>', '</li><li>', '</li></ul>' ); ?>
           <div class="entry-meta">
-            <?php the_date() ?>
             <?php //hackeryou_posted_on(); ?>
           </div><!-- .entry-meta -->
 
           <div class="entry-content">
             <?php the_content(); ?>
+            <p class="blogEnd">Published on <?php the_date(); ?>. Follow me on twitter <a href="http://twitter.com/kristencodes">@kristencodes</a></p>
             <?php wp_link_pages(array(
               'before' => '<div class="page-link"> Pages: ',
               'after' => '</div>'

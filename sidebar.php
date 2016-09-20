@@ -36,7 +36,7 @@
 	    </svg>
 	  </a>
 	</div><!-- /.header-logo -->
-	<h1>BLOG</h1>
+	<h2 class="blogTitle"><a href="http://kristen.codes/blog">BLOG</a></h2>
 <!-- 	<ul class="xoxo">
 		<?php // dynamic_sidebar( 'primary-widget-area' ); ?>
 	</ul> -->

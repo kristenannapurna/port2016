@@ -15,7 +15,7 @@ get_header();  ?>
       <li>Web Dev</li>
     </ul>
   <div class="container">
-      <h2 class="bioHeading">I'm</h2> <h1 class="likeLink">Kristen Spencer</h1><h2 class="bioHeading"> - a web developer in <span class="likeLink">Toronto</span>. I spend my days teaching the web at <a href="http://www.hackeryou.com" target="_blank">HackerYou</a> and I think that problem solving with code is pretty much the coolest thing.</h2>
+      <h2 class="bioHeading">I'm</h2> <h1 class="likeLink">Kristen Spencer</h1><h2 class="bioHeading"> - a web developer in <span class="likeLink">Toronto</span>. I spend my days teaching the web at <a href="http://www.hackeryou.com" target="_blank">HackerYou</a> and I think that problem solving with code is pretty much the best.</h2>
         <div class="rays">  
           <svg width="329px" height="79px" viewBox="213 72 329 79" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <g id="Group-2-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(217.000000, 76.000000)" stroke-linecap="round">

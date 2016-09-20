@@ -22,9 +22,11 @@
           <?php the_title(); ?>
         </a>
       </h2>
-
+			<?php the_tags( '<ul class="tagsList"><li>', '</li><li>', '</li></ul>' ); ?>
 			<section class="entry-content">
+				<?php //the_excerpt() ?>
 				<?php the_content('Continue reading <span class="meta-nav">&rarr;</span>'); ?>
+				<p class="blogEnd">Published on <?php the_date(); ?>. Follow me on twitter <a href="http://twitter.com/kristencodes">@kristencodes</a></p>
 				<?php wp_link_pages( array(
           'before' => '<div class="page-link"> Pages:',
           'after' => '</div>'
